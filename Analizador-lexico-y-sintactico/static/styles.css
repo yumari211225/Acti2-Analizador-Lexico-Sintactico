@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* color de fondo más claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #00796b; /* verde oscuro */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #009688; /* borde verde */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00796b; /* verde oscuro */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #48a999; /* verde claro */
+}
+
+.output {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #00796b; /* verde oscuro */
+}
+
+pre {
+    background-color: #e0f7fa; /* fondo claro */
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.container {
+    padding: 2em;
+    margin: auto;
+    max-width: 800px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1em;
+}
+
+.button-container {
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.output {
+    margin-top: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}

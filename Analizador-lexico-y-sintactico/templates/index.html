@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador Léxico y Sintáctico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Analizador Léxico y Sintáctico</h1>
+    </div>
+    <div class="container">
+        <form method="POST">
+            <textarea name="code" id="code" placeholder="Escribe tu código aquí...">{{ code }}</textarea>
+            <div class="button-container">
+                <button type="submit">Análisis Léxico y Sintáctico</button>
+            </div>
+        </form>
+        <div class="output">
+            <h2>Resultado Léxico</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tokens</th>
+                        <th>PR</th>
+                        <th>ID</th>
+                        <th>Números</th>
+                        <th>Símbolos</th>
+                        <th>Error</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in lexical %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        {% for cell in row %}
+                        <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>Total</td>
+                        <td>{{ total['PR'] }}</td>
+                        <td>{{ total['ID'] }}</td>
+                        <td>{{ total['NUM'] }}</td>
+                        <td>{{ total['SYM'] }}</td>
+                        <td>{{ total['ERR'] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Resultado Sintáctico</h2>
+            <pre id="sintacticoResult">{{ syntactic }}</pre>
+            <h2>Resultado Semántico</h2>
+            <pre id="semanticResult">{{ semantic }}</pre>
+            <h2>Código Corregido</h2>
+            <pre id="correctedCode">{{ corrected_code }}</pre>
+        </div>
+    </div>
+</body>
+</html>
